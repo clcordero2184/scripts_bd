@@ -1,54 +1,38 @@
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
+--                                                                   --
+--   **********    ****   ************  ************   ****    ****  --
+--   ***********   ****   ************  ************   ****    ****  --
+--   ****   ****   ****       ****            *****    ****    ****  --
+--   **********    ****       ****          *****      ****    ****  --
+--   ****   ****   ****       ****        *****        ****    ****  --
+--   ***********   ****       ****      ************   ************  --
+--   ***********   ****       ****      ************   ************  --
+--                                                                   --
+-----------------------------------------------------------------------
+-----------------------------------------------------------------------
 
--- borrado de tablas
 
-DROP TABLE SIOP_catalogos CASCADE CONSTRAINTS;
+--------------------------------------------------------
+--  DDL for Limpiar la BD Completa
+--------------------------------------------------------
 
-DROP TABLE SIOP_estados CASCADE CONSTRAINTS;
+--BORRADO DE TABLAS
+DROP TABLE SIOP_OWNER.SIOP_LINER CASCADE CONSTRAINTS;
+DROP TABLE SIOP_OWNER.SIOP_PIE CASCADE CONSTRAINTS;
+DROP TABLE SIOP_OWNER.SIOP_RECETA CASCADE CONSTRAINTS;
+DROP TABLE SIOP_OWNER.SIOP_RECETA_DETALLE CASCADE CONSTRAINTS;
+DROP TABLE SIOP_OWNER.SIOP_VALORACION_PROTESICA CASCADE CONSTRAINTS;
+COMMIT;
 
-DROP TABLE SIOP_parametros CASCADE CONSTRAINTS;
+--BORRADO DE SECUENCIAS
+DROP SEQUENCE SIOP_OWNER.SEC_SIOP_RECETA;
+DROP SEQUENCE SIOP_OWNER.SEC_SIOP_RECETA_DETALLE;
+DROP SEQUENCE SIOP_OWNER.SEC_SIOP_LINER;
+DROP SEQUENCE SIOP_OWNER.SEC_SIOP_PIE;
+DROP SEQUENCE SIOP_OWNER.SEC_SIOP_VALORACION_PROTESICA;
+COMMIT;
 
-DROP TABLE SIOP_personas CASCADE CONSTRAINTS;
 
-DROP TABLE SIOP_tipos CASCADE CONSTRAINTS;
 
-DROP TABLE siop_liners CASCADE CONSTRAINTS;
 
-DROP TABLE siop_pies CASCADE CONSTRAINTS;
-
-DROP TABLE siop_recetas CASCADE CONSTRAINTS;
-
-DROP TABLE siop_recetas_detalle CASCADE CONSTRAINTS;
-
-DROP TABLE siop_valoraciones_protesicas CASCADE CONSTRAINTS;
-
---borrado de swecuencias
-
-drop sequence sec_SIOP_catalogos;
-commit;
-
-drop sequence sec_SIOP_estados;
-commit;
-
-drop sequence sec_SIOP_parametros;
-commit;
-
-drop sequence sec_SIOP_tipos;
-commit;
-
-drop sequence sec_sdai_recetas;
-commit;
-
-drop sequence sec_siop_recetas;
-commit;
-
-drop sequence sec_siop_detalle_receta;
-commit;
-
-drop sequence sec_siop_liner;
-commit;
-
-drop sequence sec_siop_pies;
-commit;
-
-drop sequence sec_siop_valoraciones_protesic;
-commit;
